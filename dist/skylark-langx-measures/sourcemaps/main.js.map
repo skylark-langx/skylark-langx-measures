@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":["define","measures"],"mappings":";;;;;;;AAAAA,QACI,aACA,gBACA,gBACA,kBACD,SAASC,GAEX,OAAOA","file":"../main.js","sourcesContent":["define([\r\n    \"./measures\",\r\n    \"./MeasureType\",\r\n    \"./MeasureUnit\",\r\n    \"./MeasureValue\"\r\n], function(measures) {\r\n\r\n\treturn measures;\r\n});"]}
