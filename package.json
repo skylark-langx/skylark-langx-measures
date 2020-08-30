@@ -26,7 +26,8 @@
   "dependencies": {
     "skylark-langx-klass": "git+https://github.com/skylark-langx/skylark-langx-klass.git#master",
     "skylark-langx-ns": "git+https://github.com/skylark-langx/skylark-langx-ns.git#master",
-    "skylark-langx-objects": "git+https://github.com/skylark-langx/skylark-langx-objects.git#master"
+    "skylark-langx-objects": "git+https://github.com/skylark-langx/skylark-langx-objects.git#master",
+    "skylark-langx-types": "git+https://github.com/skylark-langx/skylark-langx-types.git#master"
   },
   "engines": {
     "node": ">=0.8.0"

@@ -1,10 +1,11 @@
 define([
+	"skylark-langx-types",
 	"skylark-langx-objects",
 	"skylark-langx-klass",
 	"./measures",
 	"./MeasureType",
 	"./MeasureUnit"
-],function(objects,klass,measures,MeasureType,MeasureUnit) {
+],function(types,objects,klass,measures,MeasureType,MeasureUnit) {
 
 	var MeasureValue = klass({
 		"klassName"	:	"MeasureValue",
@@ -166,6 +167,20 @@ define([
 	MeasureValue.fromArray = function(a) {
 		return new MeasureValue(a[0],a.length>1?a[1]:"undefined",a.length>1?a[2]:undefined);
 	};
+
+	MeasureValue.parse = function(value) {
+		if (value instanceof MeasureValue) {
+			return value;
+		} else if (types.isString(value)) {
+            value = MeasureValue.fromString(value);
+        } else if (types.isArray(value)) {
+            value = MeasureValue.fromArray(value);
+        } else if (types.isPlainObject(value)) {
+            value = MeasureValue.fromPlain(value);
+        } else if (types.isNumber(value)) {
+            value = MeasureValue.fromNumber(value);
+        }
+     };
 
 	MeasureValue.auto = new MeasureValue(MeasureType.auto);
 	MeasureValue.mid = new MeasureValue(MeasureType.mid);
