@@ -172,13 +172,13 @@ define([
 		if (value instanceof MeasureValue) {
 			return value;
 		} else if (types.isString(value)) {
-            value = MeasureValue.fromString(value);
+            return MeasureValue.fromString(value);
         } else if (types.isArray(value)) {
-            value = MeasureValue.fromArray(value);
+            return MeasureValue.fromArray(value);
         } else if (types.isPlainObject(value)) {
-            value = MeasureValue.fromPlain(value);
+            return MeasureValue.fromPlain(value);
         } else if (types.isNumber(value)) {
-            value = MeasureValue.fromNumber(value);
+            return MeasureValue.fromNumber(value);
         }
      };
 
