@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["skylark-langx-measures","./measures"],function(e,e){var m=["em","ex","px","pt","pc","cm","mm","in"];return e.mixin(m,{em:0,ex:1,px:2,pt:3,pc:4,cm:5,mm:6,in:7}),e.MeasureUnit=m});
+define(["skylark-langx-objects","./measures"],function(e,m){var n=["em","ex","px","pt","pc","cm","mm","in"];return e.mixin(n,{em:0,ex:1,px:2,pt:3,pc:4,cm:5,mm:6,in:7}),m.MeasureUnit=n});
 //# sourceMappingURL=sourcemaps/MeasureUnit.js.map

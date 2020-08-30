@@ -1,11 +1,11 @@
 define([
-	"skylark-langx-measures",
+	"skylark-langx-objects",
 	"./measures"
-],function(measures,measures) {
+],function(objects,measures) {
 
 	var MeasureUnit = ["em", "ex", "px", "pt", "pc", "cm", "mm", "in"];
 
-	measures.mixin(MeasureUnit,{
+	objects.mixin(MeasureUnit,{
 		"em" : 0, 
 		"ex" : 1, 
 		"px" : 2, 

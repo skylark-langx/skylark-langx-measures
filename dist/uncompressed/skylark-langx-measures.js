@@ -101,11 +101,11 @@ define('skylark-langx-measures/measures',[
 define('skylark-langx-measures/MeasureType',[
 	"skylark-langx-objects",
 	"./measures"
-],function(measures,measures) {
+],function(objects,measures) {
 
 	var MeasureType = ["auto","inherit","initial","mid","min","max","none","percent","unit"];
 	
-	measures.mixin(MeasureType,{
+	objects.mixin(MeasureType,{
 		"auto" : 0,
 		"inherit" : 1,
 		"initial" : 2,
@@ -122,13 +122,13 @@ define('skylark-langx-measures/MeasureType',[
 });
 
 define('skylark-langx-measures/MeasureUnit',[
-	"skylark-langx-measures",
+	"skylark-langx-objects",
 	"./measures"
-],function(measures,measures) {
+],function(objects,measures) {
 
 	var MeasureUnit = ["em", "ex", "px", "pt", "pc", "cm", "mm", "in"];
 
-	measures.mixin(MeasureUnit,{
+	objects.mixin(MeasureUnit,{
 		"em" : 0, 
 		"ex" : 1, 
 		"px" : 2, 

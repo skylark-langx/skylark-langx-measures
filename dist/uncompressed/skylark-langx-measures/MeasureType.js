@@ -1,11 +1,11 @@
 define([
 	"skylark-langx-objects",
 	"./measures"
-],function(measures,measures) {
+],function(objects,measures) {
 
 	var MeasureType = ["auto","inherit","initial","mid","min","max","none","percent","unit"];
 	
-	measures.mixin(MeasureType,{
+	objects.mixin(MeasureType,{
 		"auto" : 0,
 		"inherit" : 1,
 		"initial" : 2,
