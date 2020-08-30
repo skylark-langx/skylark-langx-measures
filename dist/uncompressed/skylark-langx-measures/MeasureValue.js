@@ -91,7 +91,7 @@ define([
 				case MeasureType.mid :
 					return this.mtype.toString();
 				case MeasureType.unit :
-					return this.value + this.unit.toString();
+					return this.value + MeasureUnit[this.unit];
 				case MeasureType.percent :
 					return this.value + "%";
 					break;
@@ -137,7 +137,8 @@ define([
 		}
 
 		var units = MeasureUnit.map(function(item){
-				return item.getText();
+				//return item.getText();
+				return item;
 			}).concat("%"),
 			type,
 			value,
@@ -149,7 +150,8 @@ define([
                 	type = MeasureType.percent;
                 } else {
                 	type = MeasureType.unit;
-                	unit = MeasureUnit.fromString(units[i]);
+                	//unit = MeasureUnit.fromString(units[i]);
+                	unit = MeasureUnit[units[i]];
                 }
                 break;
             }

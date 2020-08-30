@@ -236,7 +236,7 @@ define('skylark-langx-measures/MeasureValue',[
 				case MeasureType.mid :
 					return this.mtype.toString();
 				case MeasureType.unit :
-					return this.value + this.unit.toString();
+					return this.value + MeasureUnit[this.unit];
 				case MeasureType.percent :
 					return this.value + "%";
 					break;
@@ -282,7 +282,8 @@ define('skylark-langx-measures/MeasureValue',[
 		}
 
 		var units = MeasureUnit.map(function(item){
-				return item.getText();
+				//return item.getText();
+				return item;
 			}).concat("%"),
 			type,
 			value,
@@ -294,7 +295,8 @@ define('skylark-langx-measures/MeasureValue',[
                 	type = MeasureType.percent;
                 } else {
                 	type = MeasureType.unit;
-                	unit = MeasureUnit.fromString(units[i]);
+                	//unit = MeasureUnit.fromString(units[i]);
+                	unit = MeasureUnit[units[i]];
                 }
                 break;
             }
