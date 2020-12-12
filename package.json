@@ -2,7 +2,7 @@
   "name": "skylark-langx-measures",
   "version": "0.9.1",
   "description": "The skylark measure class library.",
-  "main": "-",
+  "main": "./index",
   "scripts": {
     "build": "slib build .",
     "test": "echo \"Error: no test specified\" && exit 1"
