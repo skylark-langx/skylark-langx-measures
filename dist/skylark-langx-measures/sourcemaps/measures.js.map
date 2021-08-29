@@ -1,1 +1,0 @@
-{"version":3,"sources":["measures.js"],"names":["define","skylark","attach"],"mappings":";;;;;;;AAAAA,QACI,oBACD,SAASC,GAQX,OAAOA,EAAQC,OAAO","file":"../measures.js","sourcesContent":["define([\r\n    \"skylark-langx-ns\"\r\n], function(skylark) {\r\n\t\r\n\tvar measures =  {\r\n\r\n\r\n\t};\r\n\r\n\r\n\treturn skylark.attach(\"langx.measures\",measures);\r\n});"]}
